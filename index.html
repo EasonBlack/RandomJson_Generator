@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/bootstrap-theme.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" ng-app="app" ng-controller="appCtrl">
+    <div class="row button-container">
+        <a class="btn btn-primary" ng-click="AddItem()">Add</a>
+        <a class="btn btn-info" ng-click="GeneratorJson()">Generator</a>
+        <input type="number" ng-model="count">
+    </div>
+
+    <div class="row items-container">
+        <div class="col-md-5">
+            <ul>
+                <li ng-model="item" ng-repeat="item in items">
+                    <div class="item-container">
+                        <div>
+                            <label>Title:</label>
+                        </div>
+                        <div>
+                            <input type="text" ng-model="item.title"/>
+                        </div>
+
+                    </div>
+                    <div class="item-container">
+                        <div>
+                            <label>Type: </label>
+                        </div>
+                        <div>
+                            <select
+                                    ng-model="item.type"
+                                    ng-options="itemType for itemType  in itemTypes">
+                                <option value=''>Select Me</option>
+                            </select>
+                        </div>
+                    </div>
+                    <item-condition item="item"></item-condition>
+
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-7 result-container">
+            <textarea >{{resultJson | json}}</textarea>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="vendors/jquery-1.11.1.js"></script>
+<script src="vendors/angular.js"></script>
+<script src="vendors/angular-sanitize.js"></script>
+<script src="vendors/bootstrap.js"></script>
+<script src="vendors/chance.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/app.controller.js"></script>
+<script src="scripts/app.directive.js"></script>
+</html>

@@ -1,0 +1,43 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+input[type='number'] {
+  width: 50px;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+ul li {
+  margin-bottom: 20px;
+  border: 3px solid steelblue;
+  border-radius: 10px;
+  width: 300px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+.container {
+  margin-top: 40px;
+}
+.container .button-container input {
+  width: 50px;
+}
+.container .item-container {
+  margin-bottom: 8px;
+}
+.container .item-container div {
+  display: inline-block;
+}
+.container .item-container div:first-child {
+  width: 60px;
+}
+.container .result-container {
+  height: 500px;
+}
+.container .result-container textarea {
+  width: 100%;
+  height: 100%;
+}

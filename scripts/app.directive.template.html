@@ -1,0 +1,24 @@
+<div>
+    <div class="item-container" ng-if="item.type == 'Integer'">
+        <div>
+            <label></label>
+        </div>
+        <div>
+            <label>Min:</label>
+            <input type="number" ng-model="item.min"/>
+            <label>Max:</label>
+            <input type="number" ng-model="item.max"/>
+        </div>
+    </div>
+    <div class="item-container" ng-if="item.type == 'Date'">
+        <div>
+            <label></label>
+        </div>
+        <div>
+            <label>Year:</label>
+            <input type="number" ng-model="item.year"/>
+            <label>Month:</label>
+            <input type="number" ng-model="item.month"/>
+        </div>
+    </div>
+</div>
